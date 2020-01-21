@@ -6,7 +6,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Vue from 'vue';
-import { registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start } from '../../es';
+import { registerMicroApps, runAfterFirstMounted, setDefaultMountApp, start } from 'qiankun';
 import Framework from './Framework';
 // import Framework from './Framework.vue';
 
