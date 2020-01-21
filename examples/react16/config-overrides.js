@@ -4,13 +4,15 @@ module.exports = {
   webpack: function override(config, env) {
     const copyConfig = { ...config };
     console.log('env', env);
+    console.log(`${name}-[name]`);
     copyConfig.output.library = `${name}-[name]`;
     copyConfig.output.libraryTarget = 'umd';
     copyConfig.output.jsonpFunction = `webpackJsonp_${name}`;
     return config;
   },
-  devServer: function(configFunction) {
-    return function(proxy, allowedHost) {
+
+  devServer: function (configFunction) {
+    return function (proxy, allowedHost) {
       const config = configFunction(proxy, allowedHost);
       config.open = false;
       config.hot = false;
